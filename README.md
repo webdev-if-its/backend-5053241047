@@ -42,7 +42,7 @@ Jika pada pengerjaan suatu project, terdapat perbedaan versi bahasa, misalnya da
 Namun, perbedaan versi ini juga masih bisa dimaklumi jika pengerjaan project menggunakan fitur atau package dasar yang tersedia di setiap versi Go tersebut. Karena dengan begitu, output yang dihasilkan akan selalu sama dan reproducibility tetap tercapai.
 
 ## Catatan Merge Conflict
-(tulis di sini)
+Conflict terjadi di baris kode yang mengimplementasikan fungsi CetakInfo. Hal ini karena ketika branch fitur-sapaan dibuat dan file main.go diperbarui pada bagian CetakInfo-nya, fungsi yang sama juga diperbarui di main branch sehingga kini ada dua versi fungsi yang berbeda. Untuk menyelesaikan conflict ini, saya membersihkan versi CetakInfo yang ada di main branch sehingga versi yang ada di branch fitur-sapaan dapat digunakan. Alasan dipilihnya versi CetakInfo di branch fitur-sapaan adalah karena versi ini sudah memenuhi arahan pemanggilan fungsi Sapa sambil tetap mempertahankan hasil Nama, NRP, dan versi Go yang digunakan.
 
 ## Kenapa .gitignore Penting
 (tulis di sini)
