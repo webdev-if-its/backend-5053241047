@@ -35,7 +35,11 @@ Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (l
 Git commit adalah ketika pengerjaan kode terbaru ditandai perubahannya dan tersimpan di repository lokal, lalu git push adalah proses penyimpanan atau penetapan kode terbaru tersebut di repositori jaringan git. Jika seseorang melakukan commit tanpa melakukan push, maka pembaruan kode tidak akan tersimpan dan tidak dapat diakses atau dilihat oleh tim secara online.
 
 ## Reproducibility
-(tulis di sini)
+Reproducibility adalah ketika suatu kode atau program dipastikan dapat berjalan dengan lancar dan menghasilkan output yang sama di semua environment.
+
+Jika pada pengerjaan suatu project, terdapat perbedaan versi bahasa, misalnya dalam Go, di antara anggota tim, hal ini mungkin saja memunculkan suatu hambatan dalam tercapainya reproducibility. Hambatan tersebut bisa muncul ketika kode project mulai menggunakan fitur atau library yang dirilis di versi terbarunya. Anggota tim yang menggunakan versi Go yang lebih lama tentu akan kesulitan untuk mendapatkan output yang sama dari kode tersebut.
+
+Namun, perbedaan versi ini juga masih bisa dimaklumi jika pengerjaan project menggunakan fitur atau package dasar yang tersedia di setiap versi Go tersebut. Karena dengan begitu, output yang dihasilkan akan selalu sama dan reproducibility tetap tercapai.
 
 ## Catatan Merge Conflict
 (tulis di sini)
