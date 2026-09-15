@@ -73,8 +73,18 @@ func HapusTugas(toko *TokoTugas, id int) error {
 
 // HapusTugasTercatat memanggil HapusTugas, lalu memakai defer untuk
 // MENCATAT hasilnya ke toko.Log -- baik saat berhasil maupun saat gagal.
-func HapusTugasTercatat(toko *TokoTugas, id int) error {
-	panic("belum diimplementasikan")
+func HapusTugasTercatat(toko *TokoTugas, id int) (err error) {
+	defer func ()  {
+		if err != nil {
+			pesan := fmt.Sprintf("Hapus id = %d gagal", id)
+			toko.Log = append(toko.Log, pesan)
+		} else {
+			pesan := fmt.Sprintf("Hapus id = %d berhasil", id)
+			toko.Log = append(toko.Log, pesan)
+		}
+	}()
+	err = HapusTugas(toko, id)
+	return err
 }
 
 // AmankanPanggilan menjalankan fn. Kalau fn panic, AmankanPanggilan
