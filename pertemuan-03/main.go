@@ -63,7 +63,7 @@ func HapusTugas(toko *TokoTugas, id int) error {
 			return nil
 		}
 	}
-	return nil
+	return ErrTugasTidakDitemukan
 }
 
 // HapusTugasTercatat memanggil HapusTugas, lalu memakai defer untuk
